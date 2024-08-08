@@ -6,7 +6,6 @@ brew install readline qt5 pkgconfig coreutils
 brew install RfidResearchGroup/proxmark3/arm-none-eabi-gcc
 brew install recode
 brew install astyle
-brew install gnu-sed
 brew install openssl
 
 #Get and enter repo:
