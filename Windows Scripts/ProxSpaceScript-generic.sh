@@ -5,6 +5,7 @@ if [ "$EXIT" -ne "0" ]; then
 	touch touched
 	exit
 fi
+rm touched
 
 git clone https://github.com/RfidResearchGroup/proxmark3.git
 
