@@ -13,4 +13,6 @@ exit 0
 :uhohspaces
 echo The current folder has spaces in its file path! Scary!!!
 echo Try moving this script to a folder that has no spaces anywhere in its filepath
-echo The current filepath is: %cd%
+echo The current filepath is: "%cd%\"
+pause
+exit 0
