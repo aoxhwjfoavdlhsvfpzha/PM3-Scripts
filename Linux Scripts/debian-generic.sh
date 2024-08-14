@@ -27,7 +27,7 @@ if [ "$rerun_check" -ne "1" ]; then
     lsusb | grep -i proxmark
     EXIT=$?
     if [ "$EXIT" -ne "0" ]; then
-        echo "Wizard couldn't detect PM3, if it isn't connected it won't be flashed!"
+        echo "Wizard couldn't detect PM3, if it isn't connected the script will fail!"
         read -p "Continue? Y/n:" PM3_detect_conf
         if [ "$PM3_detect_conf" == "" ]; then
             PM3_detect_conf="y"
@@ -50,6 +50,7 @@ cd ~/proxmark3
 EXIT=$?
 if [ "$EXIT" -ne "0" ]; then
     echo "Error making accessrights! Aborting!"
+    echo "Is the PM3 plugged in?"
     exit 2
 fi
 
