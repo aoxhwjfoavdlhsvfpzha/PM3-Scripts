@@ -5,7 +5,7 @@ rerun_check="${1:-0}"
 scriptpath=$(pwd);
 script="$scriptpath"
 script+="/debian-rdv4.sh"
-
+spaces=$script
 script=$(echo $script | sed 's/ /\\ /g')
 
 if [ "$rerun_check" -ne "1" ]; then
@@ -14,7 +14,7 @@ if [ "$rerun_check" -ne "1" ]; then
     sudo apt-get upgrade -y
     sudo apt-get auto-remove -y
     #Install dependencies
-    sudo apt-get install --no-install-recommends git ca-certificates build-essential pkg-config \
+    sudo apt-get install -y --no-install-recommends git ca-certificates build-essential pkg-config \
     libreadline-dev gcc-arm-none-eabi libnewlib-dev qtbase5-dev \
     libbz2-dev liblz4-dev libbluetooth-dev libpython3-dev libssl-dev libgd-dev
 
@@ -40,7 +40,7 @@ if [ "$rerun_check" -ne "1" ]; then
     make accessrights
 
     #log into new instance for permissions to take hold
-    sudo -u $USER "$script" 1
+    sudo -u $USER "$spaces" 1
     exit 0
 fi
 

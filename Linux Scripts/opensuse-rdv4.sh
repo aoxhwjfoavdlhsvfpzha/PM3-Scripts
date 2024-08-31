@@ -10,7 +10,7 @@ script=$(echo $script | sed 's/ /\\ /g')
 
 if [ "$rerun_check" -ne "1" ]; then
     #Update apt
-    sudo zypper install git patterns-devel-base-devel_basis gcc-c++ \
+    sudo zypper -n install git patterns-devel-base-devel_basis gcc-c++ \
     readline-devel libbz2-devel liblz4-devel cross-arm-none-gcc12 \
     cross-arm-none-newlib-devel python3-devel libqt5-qtbase-devel \
     libopenssl-devel gd-devel

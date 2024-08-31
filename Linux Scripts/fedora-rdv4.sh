@@ -10,7 +10,7 @@ script=$(echo $script | sed 's/ /\\ /g')
 
 if [ "$rerun_check" -ne "1" ]; then
     #Update apt
-    sudo dnf install git make gcc gcc-c++ arm-none-eabi-gcc-cs arm-none-eabi-newlib \
+    sudo dnf install -y git make gcc gcc-c++ arm-none-eabi-gcc-cs arm-none-eabi-newlib \
     readline-devel bzip2-devel lz4-devel qt5-qtbase-devel bluez-libs-devel \
     python3-devel libatomic openssl-devel gd-devel
 
