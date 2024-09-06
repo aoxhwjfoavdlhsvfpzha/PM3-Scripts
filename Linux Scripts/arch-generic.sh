@@ -11,7 +11,7 @@ script=$(echo $script | sed 's/ /\\ /g')
 if [ "$rerun_check" -ne "1" ]; then
     #Update apt
     sudo pacman -Syu git base-devel readline bzip2 lz4 arm-none-eabi-gcc \
-    arm-none-eabi-newlib qt5-base bluez python gd --needed
+    arm-none-eabi-newlib qt5-base bluez python gd usbutils --needed
 
     #Get and enter repo:
     git clone https://github.com/RfidResearchGroup/proxmark3.git ~/proxmark3
