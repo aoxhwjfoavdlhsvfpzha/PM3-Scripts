@@ -10,4 +10,4 @@ I am not a good scripter, appologies to anyone who knows what they're doing who 
 
 Copyright stuffs:
 
-Everything here is licensed under GPLv3 to match the Iceman PM3 repo
+Everything here is licensed under GPLv3 to match the Iceman PM3 repo, see [LICENSE](https://github.com/aoxhwjfoavdlhsvfpzha/PM3-Scripts/blob/main/LICENSE)
