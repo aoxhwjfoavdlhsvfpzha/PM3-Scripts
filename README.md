@@ -15,7 +15,7 @@ These scripts install the Iceman firmware which can be found here:
 </ul>
 
 
-Information about the PM3:<br>
+Information about the Proxmark3:<br>
 <ul>
   <li>https://github.com/Proxmark/proxmark3/wiki</li>
   <li>https://cq.cx/proxmark3.pl</li>
