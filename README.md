@@ -7,6 +7,13 @@ Scripts have been tested and seem to be working, but use of scripts is ***at you
 
 I am not a good scripter, appologies to anyone who knows what they're doing who looks at my code :)
 
+These scripts install the Iceman firmware which can be found here:
+https://github.com/RfidResearchGroup/proxmark3
+
+Information about the PM3:
+https://github.com/Proxmark/proxmark3/wiki
+https://cq.cx/proxmark3.pl
+
 
 Copyright stuffs:
 
