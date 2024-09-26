@@ -13,6 +13,13 @@ git clone https://github.com/RfidResearchGroup/proxmark3.git ~/proxmark3
 cd ~/proxmark3
 git pull
 
+cd ~/proxmark3
+
+#build it
+make clean && make -j
+#Install if desired
+sudo make install
+
 #Check PM3 Connection
 sudo dmesg | grep -i proxmark
 EXIT=$?
@@ -26,13 +33,6 @@ if [ "$EXIT" -ne "0" ]; then
         exit 1
     fi
 fi
-
-cd ~/proxmark3
-
-#build it
-make clean && make -j
-#Install if desired
-sudo make install
 
 #Flash PM3 if desired
 ./pm3-flash-all

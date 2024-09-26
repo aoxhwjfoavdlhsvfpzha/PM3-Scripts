@@ -14,6 +14,17 @@ git clone https://github.com/RfidResearchGroup/proxmark3.git ~/proxmark3
 cd ~/proxmark3
 git pull
 
+cd ~/proxmark3
+
+cp Makefile.platform.sample Makefile.platform
+gsed -i '0,/PLATFORM=PM3RDV4/{s/PLATFORM=PM3RDV4/#PLATFORM=PM3RDV4/}' Makefile.platform
+gsed -i '0,/#PLATFORM=PM3GENERIC/{s/#PLATFORM=PM3GENERIC/PLATFORM=PM3GENERIC/}' Makefile.platform
+
+#build it
+make clean && make -j
+#Install if desired
+sudo make install
+
 #Check PM3 Connection:
 sudo dmesg | grep -i proxmark
 EXIT=$?
@@ -27,17 +38,6 @@ if [ "$EXIT" -ne "0" ]; then
         exit 1
     fi
 fi
-
-cd ~/proxmark3
-
-cp Makefile.platform.sample Makefile.platform
-gsed -i '0,/PLATFORM=PM3RDV4/{s/PLATFORM=PM3RDV4/#PLATFORM=PM3RDV4/}' Makefile.platform
-gsed -i '0,/#PLATFORM=PM3GENERIC/{s/#PLATFORM=PM3GENERIC/PLATFORM=PM3GENERIC/}' Makefile.platform
-
-#build it
-make clean && make -j
-#Install if desired
-sudo make install
 
 #Flash PM3 if desired
 ./pm3-flash-all
