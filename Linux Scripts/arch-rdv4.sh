@@ -27,8 +27,6 @@ fi
 
 cd ~/proxmark3
 
-sudo sed -i 's/explicit QFutureInterface<void>(State initialState = NoState)/explicit QFutureInterface(State initialState = NoState)/' /usr/include/qt/QtCore/qfutureinterface.h
-
 #build it
 make clean && make -j
 #Install if desired

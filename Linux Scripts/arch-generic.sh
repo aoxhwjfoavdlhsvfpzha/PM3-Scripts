@@ -31,8 +31,6 @@ cp Makefile.platform.sample Makefile.platform
 sed -i '0,/PLATFORM=PM3RDV4/{s/PLATFORM=PM3RDV4/#PLATFORM=PM3RDV4/}' Makefile.platform
 sed -i '0,/#PLATFORM=PM3GENERIC/{s/#PLATFORM=PM3GENERIC/PLATFORM=PM3GENERIC/}' Makefile.platform
 
-sudo sed -i 's/explicit QFutureInterface<void>(State initialState = NoState)/explicit QFutureInterface(State initialState = NoState)/' /usr/include/qt/QtCore/qfutureinterface.h
-
 #build it
 make clean && make -j
 #Install if desired
