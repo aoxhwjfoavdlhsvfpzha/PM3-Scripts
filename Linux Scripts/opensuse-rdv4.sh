@@ -36,7 +36,7 @@ fi
 cd ~/proxmark3
 
 #build it
-make clean && make -j
+make clean && make -j8
 #Install if desired
 sudo make install
 

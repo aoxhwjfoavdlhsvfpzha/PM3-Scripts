@@ -32,7 +32,7 @@ sed -i '0,/PLATFORM=PM3RDV4/{s/PLATFORM=PM3RDV4/#PLATFORM=PM3RDV4/}' Makefile.pl
 sed -i '0,/#PLATFORM=PM3GENERIC/{s/#PLATFORM=PM3GENERIC/PLATFORM=PM3GENERIC/}' Makefile.platform
 
 #build it
-make clean && make -j
+make clean && make -j8
 #Install if desired
 sudo make install
 
