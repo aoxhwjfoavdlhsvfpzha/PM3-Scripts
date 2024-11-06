@@ -13,7 +13,7 @@ cd proxmark3
 
 git pull
 
-make clean && make -j
+make clean && make -j8
 
 ./pm3-flash-all
 
